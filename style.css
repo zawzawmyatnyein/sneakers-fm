@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.cart--open {
+    @apply z-10 opacity-100 visible translate-y-0;
+}
+
+.cart--close {
+    @apply -z-10 opacity-0 invisible -translate-y-3;
+}
+
+.overlay--open {
+    @apply z-40 opacity-100 visible
+}
+
+.overlay--close {
+    @apply -z-40 opacity-0 invisible
+}
+
+.offcanvas--open {
+    @apply z-50 translate-x-0 visible
+}
+
+.offcanvas--close {
+    @apply  -z-50 -translate-x-full invisible
+}
+
+.lightbox--carousel-slide,
+.mobile--carousel-slide {
+    transition: visibility 0s 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lightbox--carousel-slide.visible,
+.mobile--carousel-slide.visible {
+    transition: visibility 0s 0s cubic-bezier(0.4, 0, 0.2, 1);
+}

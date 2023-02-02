@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css">
+    <script type="module" src="/js/main.js" defer></script>
+    <title>Sneakers</title>
+  </head>
+  <body>
+    <header class="lg:container mx-auto px-4 md:px-8 lg:px-16">
+        <div class="flex items-center py-4 md:py-6 border-b">
+            <button aria-label="Open navigation" aria-expanded="false" id="mobile-menu" class="lg:hidden mt-1 mr-6 lg:mr-0 rounded-sm outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange"><img aria-hidden="true" src="/images/icon-menu.svg"></button>
+            <a href="#" class="rounded outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange"><img class="md:h-6" src="/images/logo.svg" alt="Sneakers Logo"></a>
+            <nav class="ml-12 hidden lg:block">
+                <ul class="flex items-center space-x-8 text-dark-gray-blue">
+                    <li
+                        class="
+                            relative after:absolute after:-bottom-[38px] after:left-0
+                            after:content-[''] after:inline-block after:w-full after:h-1 after:bg-orange
+                            after:invisible after:opacity-0 hover:after:visible hover:after:opacity-100 transition-opacity
+                        "
+                    >
+                        <a href="#" class="rounded outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange">Collections</a>
+                    </li>
+                    <li
+                        class="
+                            relative after:absolute after:-bottom-[38px] after:left-0
+                            after:content-[''] after:inline-block after:w-full after:h-1 after:bg-orange
+                            after:invisible after:opacity-0 hover:after:visible hover:after:opacity-100 transition-opacity
+                        "
+                    >
+                        <a href="#" class="rounded outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange">Men</a>
+                    </li>
+                    <li
+                        class="
+                            relative after:absolute after:-bottom-[38px] after:left-0
+                            after:content-[''] after:inline-block after:w-full after:h-1 after:bg-orange
+                            after:invisible after:opacity-0 hover:after:visible hover:after:opacity-100 transition-opacity
+                        "
+                    >
+                        <a href="#" class="rounded outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange">Women</a>
+                    </li>
+                    <li
+                        class="
+                            relative after:absolute after:-bottom-[38px] after:left-0
+                            after:content-[''] after:inline-block after:w-full after:h-1 after:bg-orange
+                            after:invisible after:opacity-0 hover:after:visible hover:after:opacity-100 transition-opacity
+                        "
+                    >
+                        <a href="#" class="rounded outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange">About</a>
+                    </li>
+                    <li
+                        class="
+                            relative after:absolute after:-bottom-[38px] after:left-0
+                            after:content-[''] after:inline-block after:w-full after:h-1 after:bg-orange
+                            after:invisible after:opacity-0 hover:after:visible hover:after:opacity-100 transition-opacity
+                        "
+                    >
+                        <a href="#" class="rounded outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="ml-auto flex items-center space-x-8 md:space-x-12">
+                <button aria-label="Open shopping cart" class="cart--btn relative px-1 rounded outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange">
+                    <img aria-hidden="true" src="/images/icon-cart.svg">
+                    <span class="absolute -top-1/2 left-1/2 translate-y-1 px-2 rounded-full text-[0.6rem] text-white bg-orange"></span>
+                </button>
+                <button class="w-8 h-8 md:w-12 md:h-12 border-2 rounded-full hover:border-orange outline-none focus:border-orange">
+                    <img src="/images/image-avatar.png" alt="Profile Image">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative md:container mx-auto md:px-16">
+        <div class="sm:py-12 lg:py-20 grid grid-cols-2 sm:justify-items-center sm:gap-y-12 lg:gap-y-0 lg:gap-x-12 xl:gap-x-28">
+            <!-- Mobile Product Carousel -->
+            <section class="mobile--carousel relative overflow-hidden min-h-[20rem] col-span-2 sm:hidden">
+                <div role="status" aria-live="assertive" class="sr-only"></div>
+                <button
+                    aria-label="Previous slide"
+                    disabled
+                    class="mobile--carousel-prev z-10 absolute top-1/2 left-4 -translate-y-1/2 bg-white w-10 h-10 rounded-full flex justify-center items-center group outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange disabled:cursor-not-allowed">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 group-hover:text-orange group-focus:text-orange group-disabled:text-current">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </button>
+                <div class="mobile--carousel-contents-container w-full h-full overflow-hidden">
+                    <ul role="presentation" class="mobile--carousel-contents w-full h-full relative transition-transform duration-300">
+                        <li class="mobile--carousel-slide w-full h-full absolute visible"><img class="w-full h-full object-cover object-center" src="/images/image-product-1.jpg" alt="Image of Product 1"></li>
+                        <li class="mobile--carousel-slide w-full h-full absolute invisible"><img class="w-full h-full object-cover object-center" src="/images/image-product-2.jpg" alt="Image of Product 2"></li>
+                        <li class="mobile--carousel-slide w-full h-full absolute invisible"><img class="w-full h-full object-cover object-center" src="/images/image-product-3.jpg" alt="Image of Product 3"></li>
+                        <li class="mobile--carousel-slide w-full h-full absolute invisible"><img class="w-full h-full object-cover object-center" src="/images/image-product-4.jpg" alt="Image of Product 4"></li>
+                    </ul>
+                </div>
+                <button
+                    aria-label="Next slide"
+                    class="mobile--carousel-next z-10 absolute top-1/2 right-4 -translate-y-1/2 bg-white w-10 h-10 rounded-full flex justify-center items-center group outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange disabled:cursor-not-allowed">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 group-hover:text-orange group-focus:text-orange group-disabled:text-current">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+            </section>
+
+            <!-- Desktop Product Gallery -->
+            <section class="col-span-2 lg:col-span-1 hidden sm:block sm:px-12 md:px-0 xl:px-10 space-y-8">
+                <button aria-label="Open image gallery" aria-expanded="false" class="lightbox--open w-full sm:h-80 md:h-96 lg:h-auto rounded-lg overflow-hidden outline-none focus:ring-2 focus:ring-orange">
+                    <img class="w-full h-full object-cover" src="/images/image-product-1.jpg" alt="Product 1">
+                </button>
+                <div class="gallery--thumbnails-container px-8 lg:px-0 grid grid-cols-4 gap-x-12 lg:gap-x-8">
+                    <button data-selected data-src="/images/image-product-1.jpg" class="gallery--thumbnails rounded-lg overflow-hidden outline-none border-2 border-transparent border-orange focus:border-orange">
+                        <img class="opacity-50 hover:opacity-50" src="/images/image-product-1-thumbnail.jpg" alt="Product 1 thumbnail">
+                    </button>
+                    <button data-src="/images/image-product-2.jpg" class="gallery--thumbnails rounded-lg overflow-hidden outline-none border-2 border-transparent focus:border-orange">
+                        <img class="hover:opacity-50" src="/images/image-product-2-thumbnail.jpg" alt="Product 2 thumbnail">
+                    </button>
+                    <button data-src="/images/image-product-3.jpg" class="gallery--thumbnails rounded-lg overflow-hidden outline-none border-2 border-transparent focus:border-orange">
+                        <img class="hover:opacity-50" src="/images/image-product-3-thumbnail.jpg" alt="Product 3 thumbnail">
+                    </button>
+                    <button data-src="/images/image-product-4.jpg" class="gallery--thumbnails rounded-lg overflow-hidden outline-none border-2 border-transparent focus:border-orange">
+                        <img class="hover:opacity-50" src="/images/image-product-4-thumbnail.jpg" alt="Product 4 thumbnail">
+                    </button>
+                </div>
+            </section>
+
+            <section class="col-span-2 lg:col-span-1 px-8 sm:px-12 md:px-0 pt-4 pb-16 sm:py-0 flex flex-col justify-center space-y-8">
+                <div class="space-y-4">
+                    <h2 class="text-orange text-xs md:text-sm font-bold uppercase tracking-widest">Sneaker Company</h2>
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold">Fall Limited Edition Sneakers</h1>
+                </div>
+                <p class="text-dark-gray-blue leading-relaxed">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                <div class="flex items-center justify-between sm:block md:space-y-2">
+                    <div class="text-2xl font-bold flex items-center gap-x-4">
+                        $125.00
+                        <span class="px-2 py-0.5 rounded-md text-orange text-base bg-orange-pale">50%</span>
+                    </div>
+                    <div class="text-gray-blue line-through">$250.00</div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-stretch gap-y-4 md:gap-y-0 gap-x-4">
+                    <!-- Quantity Spinner  -->
+                    <div class="qty--container rounded-lg bg-light-gray-blue flex justify-between md:justify-start gap-x-8 shadow-sm">
+                        <button aria-label="Decrease Quantity" class="qty--decrement px-4 py-4 md:py-3 rounded-lg hover:opacity-70 disabled:opacity-70 disabled:cursor-not-allowed outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange"><img aria-hidden="true" src="/images/icon-minus.svg"></button>
+                        <div
+                            data-min="1" data-max="15" data-qty="1"
+                            role="spinbutton" aria-label="Quantity" aria-valuenow="1" aria-valuemin="1" aria-valuemax="15"
+                            class="qty--input self-center font-bold"
+                        >
+                            1
+                        </div>
+                        <button aria-label="Increase Quantity" class="qty--increment px-4 py-4 md:py-3 rounded-lg hover:opacity-70 disabled:opacity-70 disabled:cursor-not-allowed outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange"><img aria-hidden="true" src="/images/icon-plus.svg"></button>
+                    </div>
+
+                    <!-- Add To Cart Button  -->
+                    <button id="addToCart" class="flex justify-center md:justify-start items-center gap-x-2 px-14 py-3 rounded-lg bg-orange hover:bg-orange/70 transition-opacity text-white font-bold shadow-2xl shadow-orange outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange">
+                        <img class="h-4" src="/images/icon-cart-white.svg">
+                        Add to cart
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Shopping Cart -->
+        <div
+            aria-label="Shopping cart"
+            class="cart--container cart--close transition min-w-[95%] sm:min-w-max absolute right-1/2 translate-x-1/2 sm:translate-x-0 sm:right-8 top-4 sm:-top-4 bg-white shadow-2xl rounded-lg"
+        >
+            <header class="px-6 pt-2 pb-4 border-b font-bold">Cart</header>
+            <div class="cart--contents p-6 space-y-6">
+                <div class="px-20 py-16 text-center font-bold text-dark-gray-blue">Your cart is empty.</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Navigation  -->
+    <div class="offcanvas--overlay overlay--close transition-opacity lg:hidden absolute inset-0 min-w-full min-h-screen bg-black/75">
+        <nav
+            aria-label="Main navigation"
+            aria-describedby="hint"
+            class="offcanvas--container offcanvas--close transition-transform duration-200 lg:hidden absolute top-0 left-0 w-64 sm:w-1/2 md:w-1/3 h-screen bg-white p-6 space-y-8"
+        >
+            <button class="offcanvas--close-btn rounded-sm outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange"><img src="/images/icon-close.svg"></button>
+            <div class="flex justify-center">
+                <ul class="flex flex-col space-y-8 text-lg font-bold">
+                    <li><a href="#" class="rounded outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange">Collections</a></li>
+                    <li><a href="#" class="rounded outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange">Men</a></li>
+                    <li><a href="#" class="rounded outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange">Women</a></li>
+                    <li><a href="#" class="rounded outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange">About</a></li>
+                    <li><a href="#" class="rounded outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange">Contact</a></li>
+                </ul>
+                <p id="hint" class="sr-only">Use the Escape key to close this navigation</p>
+            </div>
+        </nav>
+    </div>
+
+    <!--  Light Box Gallery -->
+    <div class="lightbox--overlay hidden absolute -z-20 opacity-0 invisible transition-opacity inset-0 min-w-full min-h-screen bg-black/75 sm:flex sm:flex-col justify-center items-stretch">
+        <div class="lightbox--container -z-30 opacity-0 invisible space-y-6 flex flex-col items-center">
+            <button class="lightbox--close inline-block rounded-sm group outline-none focus:ring-2 focus:ring-orange">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-8 h-8 text-white hover:text-orange group-focus:text-orange">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <section aria-label="Carousel" class="lightbox--carousel relative w-4/5 md:w-2/3 lg:w-1/2 xl:w-2/5">
+                <div role="status" aria-live="assertive" class="sr-only"></div>
+                <button
+                    aria-label="Previous slide"
+                    disabled
+                    class="lightbox--carousel-prev z-40 absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 bg-white w-12 h-12 rounded-full flex justify-center items-center group outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange disabled:cursor-not-allowed"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 h-5 group-hover:text-orange group-focus:text-orange group-disabled:text-current">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </button>
+                <div class="lightbox--carousel-contents-container rounded-xl overflow-hidden flex items-center justify-center">
+                    <ul role="presentation" class="lightbox--carousel-contents w-full h-[80vw] md:h-[60vw] lg:h-[50vw] xl:h-[40vw] relative transition-transform duration-300">
+                        <li class="lightbox--carousel-slide w-full h-full absolute visible"><img class="object-cover" src="/images/image-product-1.jpg" alt="Image of Product 1"></li>
+                        <li class="lightbox--carousel-slide w-full h-full absolute invisible"><img class="object-cover" src="/images/image-product-2.jpg" alt="Image of Product 2"></li>
+                        <li class="lightbox--carousel-slide w-full h-full absolute invisible"><img class="object-cover" src="/images/image-product-3.jpg" alt="Image of Product 3"></li>
+                        <li class="lightbox--carousel-slide w-full h-full absolute invisible"><img class="object-cover" src="/images/image-product-4.jpg" alt="Image of Product 4"></li>
+                    </ul>
+                </div>
+                <button
+                    aria-label="Next slide"
+                    class="lightbox--carousel-next z-40 absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 bg-white w-12 h-12 rounded-full flex justify-center items-center group outline-none focus:ring-2 focus:ring-offset-1 focus:ring-orange disabled:cursor-not-allowed"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 h-5 group-hover:text-orange group-focus:text-orange group-disabled:text-current">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+            </section>
+
+            <div aria-hidden="true" class="lightbox--carousel-dots-container mt-6 w-4/5 md:w-2/3 lg:w-1/2 xl:w-2/5 mx-auto px-12 grid grid-cols-4 gap-x-8">
+                <button tabindex="-1" class="lightbox--carousel-dots rounded-lg overflow-hidden bg-white outline-none border-2 border-transparent border-orange focus:border-orange">
+                    <img class="opacity-50" src="/images/image-product-1-thumbnail.jpg">
+                </button>
+                <button tabindex="-1" class="lightbox--carousel-dots rounded-lg overflow-hidden outline-none border-2 border-transparent focus:border-orange">
+                    <img class="" src="/images/image-product-2-thumbnail.jpg">
+                </button>
+                <button tabindex="-1" class="lightbox--carousel-dots rounded-lg overflow-hidden outline-none border-2 border-transparent focus:border-orange">
+                    <img class="" src="/images/image-product-3-thumbnail.jpg">
+                </button>
+                <button tabindex="-1" class="lightbox--carousel-dots rounded-lg overflow-hidden outline-none border-2 border-transparent focus:border-orange">
+                    <img class="" src="/images/image-product-4-thumbnail.jpg">
+                </button>
+            </div>
+        </div>
+    </div>
+
+  </body>
+</html>
